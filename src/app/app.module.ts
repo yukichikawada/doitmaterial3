@@ -1,18 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+
+import { SharedModules } from './shared';
+import { AppRoutingModule } from './routes';
 
 import { AppComponent } from './app.component';
+import { NotFoundComponent } from './not-found.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+    BrowserAnimationsModule,
+    SharedModules,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
